@@ -365,11 +365,7 @@ static struct acpuclk_krait_params acpuclk_8064_params __initdata = {
 	.l2_freq_tbl_size = sizeof(l2_freq_tbl),
 	.bus_scale = &bus_scale_data,
 	.qfprom_phys_base = 0x00700000,
-#ifdef CONFIG_LOW_CPUCLOCKS
-	.stby_khz = 162000,
-#else
 	.stby_khz = 384000,
-#endif
 };
 
 static int __init acpuclk_8064_probe(struct platform_device *pdev)
